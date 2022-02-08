@@ -1,0 +1,37 @@
+@font-face {
+  font-family: 'icon_chevron';
+  src:  url('../fonts/icon_chevron.eot?hcdume');
+  src:  url('../fonts/icon_chevron.eot?hcdume#iefix') format('embedded-opentype'),
+    url('../fonts/icon_chevron.ttf?hcdume') format('truetype'),
+    url('../fonts/icon_chevron.woff?hcdume') format('woff'),
+    url('../fonts/icon_chevron.svg?hcdume#icon_chevron') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon_fonts-chevron"]:after, [class*=" icon_fonts-chevron"]:after {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icon_chevron' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon_fonts-chevronchevron-left:after {
+  content: "\e900";
+  font-size: 70px;
+  color: #afb0b0;
+}
+.icon_fonts-chevronchevron-righ:after {
+  content: "\e901";
+  font-size: 70px;
+  color: #afb0b0;
+}
