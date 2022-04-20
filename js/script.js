@@ -1,24 +1,24 @@
 AOS.init({
-  delay: 300,
-  duration: 1000,
-  disable: 'mobile',
+	delay: 300,
+	duration: 1000,
+	disable: 'mobile',
 });
 
-const swiper = new Swiper('.swiper-container',{
+const swiper = new Swiper('.swiper-container', {
 	slidesPerView: 3,
 	navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev'
-  },
-  loop: true,
-  centeredSlides: true,
-  initialSlide: 1,
-  autoplay:{
-  	delay: 2000,
-  	disableOnInteraction: false
-  },
-  speed: 700,
-  freeModeSticky: true,
+		nextEl: '.swiper-button-next',
+		prevEl: '.swiper-button-prev'
+	},
+	loop: true,
+	centeredSlides: true,
+	initialSlide: 1,
+	autoplay: {
+		delay: 2000,
+		disableOnInteraction: false
+	},
+	speed: 700,
+	freeModeSticky: true,
 });
 
 const navPanel = document.querySelector('.wrapp__navigation');
@@ -28,9 +28,9 @@ const header = document.querySelector('#header');
 const navigatorIcon = document.querySelector('.navigator__icon');
 
 checked.addEventListener('click', function () {
-	if(checked.checked){
+	if (checked.checked) {
 		cardBlock.firstElementChild.style.display = "none";
-	}else{
+	} else {
 		cardBlock.firstElementChild.style.display = "block";
 	}
 })
@@ -38,20 +38,20 @@ checked.addEventListener('click', function () {
 window.addEventListener('scroll', () => {
 	let sticky = navPanel.offsetTop;
 	if (window.pageYOffset > 0) {
-   	navPanel.classList.add("nav__height");
-  } else {
-    	navPanel.classList.remove("nav__height");
-  }
+		navPanel.classList.add("nav__height");
+	} else {
+		navPanel.classList.remove("nav__height");
+	}
 })
 
 if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-    document.querySelector('.iphon_screens_img').remove()
-    document.querySelector('.iphon_heading').remove()
-    document.querySelector('.wrapp__navigation').remove()
-    document.querySelector('.heading__img').remove()
-    document.querySelector('.navigator__icon').style.display = 'block';
+	document.querySelector('.iphon_screens_img').remove()
+	document.querySelector('.iphon_heading').remove()
+	document.querySelector('.wrapp__navigation').remove()
+	document.querySelector('.heading__img').remove()
+	document.querySelector('.navigator__icon').style.display = 'block';
 
-  } else {
+} else {
 
 }
 const menuLinks = document.querySelectorAll('.menu__link[data-goto]')
@@ -63,8 +63,8 @@ if (menuLinks.length > 0) {
 		const menuLink = e.target
 		if (menuLink.dataset.goto && document.querySelector(menuLink.dataset.goto)) {
 			const gotoBlock = document.querySelector(menuLink.dataset.goto)
-			if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
-				let gotoValueBlock = gotoBlock.getBoundingClientRect().top + pageYOffset - document.querySelector('.navMobile').offsetHeight;	
+			if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+				let gotoValueBlock = gotoBlock.getBoundingClientRect().top + pageYOffset - document.querySelector('.navMobile').offsetHeight;
 				window.scrollTo({
 					top: gotoValueBlock,
 					behavior: "smooth"
