@@ -1,5 +1,5 @@
-@import "http://fonts.fontstorage.com/import/lato.css";
-@import "http://fonts.fontstorage.com/import/varelaround.css";
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Varela+Round&display=swap');
 
 ul[class],
 ol[class] {
