@@ -73,6 +73,7 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
 	document.querySelector('.wrapp__navigation').remove()
 	document.querySelector('.heading__img').remove()
 	document.querySelector('.navigator__icon').style.display = 'block';
+	document.querySelector('.slider').style.display = 'none';
 
 } else {
 
@@ -113,3 +114,5 @@ navigatorIcon.addEventListener('click', () => {
 	document.body.classList.toggle('togleBody');
 	document.querySelector('.navMobile').classList.toggle('activeNavMobile');
 })
+
+console.log(navigator.userAgent);
