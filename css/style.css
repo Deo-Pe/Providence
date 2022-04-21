@@ -19,7 +19,23 @@ figcaption,
 blockquote,
 dl,
 dd {
-  margin: 0;
+	margin: 0;
+}
+.blockVideo{
+	height: 100vh;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #404147;
+	z-index: 20;
+}
+.blockVideo video{
+	width: 500px;
+}
+.stop-scrolling {
+	/* height: 100vh; */
+	overflow: hidden;
 }
 *:focus{
     outline: none
@@ -32,10 +48,10 @@ a{
 	font-weight: 700;
 }
 body {
-  min-height: 100vh;
-  scroll-behavior: smooth;
-  text-rendering: optimizeSpeed;
-  line-height: 1.5;
+	min-height: 100vh;
+	scroll-behavior: smooth;
+	text-rendering: optimizeSpeed;
+	line-height: 1.5;
 }
 .wrapper{
 	max-width: 1170px;
@@ -105,7 +121,7 @@ body {
 .nav_left > a{
 	color: #26272d;
 	margin: 0 45px 0 0;
-}c
+}
 .nav_left > a:hover{
 	color: #afb0b0;
 }
@@ -120,7 +136,7 @@ body {
 	justify-content: space-between;
 	align-items: center;
 }
- .togleBody{
+.togleBody{
 	overflow: hidden;
 	height: 100%;
 }
@@ -443,13 +459,13 @@ header{
 	font-weight: 500; 
 }
 					/*slider*/
-.slider{
+/* .slider{
 	min-height: 520px;
-}
+} */
 .swiper-container {
-  max-width: 600px;
-  height: 400px;
-  margin-top: 130px;
+	max-width:  60vw;
+	height: 500px;
+	margin-top: 130px;
 }
 .swiper-slide {
 	opacity: 0.3;
@@ -461,10 +477,6 @@ header{
 	overflow: hidden;
 	margin: auto;
 	display: block;
-}
-.swiper_buttons{
-	min-width: 1170px;
-	margin: auto;
 }
 .swiper-slide-active{
 	opacity: 1;
@@ -508,7 +520,7 @@ header{
 .chois{
 	min-height: 900px;
 	background-color: #f4f4f5;
-`}
+}
 .chois_wrapper{
 	max-width: 1170px;
 	margin: auto;
@@ -569,15 +581,17 @@ header{
 }
 .checkbox{
 	visibility: hidden;
+	cursor: pointer;
+
 }
 .swich{
 	position: relative;
 	display: inline-block;
 	width: 200px;
-   border: 1px solid #dadcdf;
-   border-radius: 30px;
-   text-align: right;
-   font-family: 'Lato';
+    border: 1px solid #dadcdf;
+    border-radius: 30px;
+    text-align: right;
+    font-family: 'Lato';
 	font-weight: 600;
 	color: #afb0b0;
 	padding: 12px 20px;
@@ -586,6 +600,7 @@ header{
 }
 .swich > p{
 	display: inline-block;
+	cursor: pointer;
 }
 .checkbox_slider:before{
 	content: "Individual";
@@ -597,7 +612,6 @@ header{
 	left: 3px;
 	background-color: #ffffff;
 	box-shadow: 10px 10px 20px 10px #c9cace;
-	cursor: pointer;
 	font-family: 'Lato';
 	font-weight: 600;
 	padding: 9px 0;

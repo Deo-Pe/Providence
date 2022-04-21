@@ -14,20 +14,43 @@ const swiper = new Swiper('.swiper-container', {
 	centeredSlides: true,
 	initialSlide: 1,
 	autoplay: {
-		delay: 2000,
+		delay: 4000,
 		disableOnInteraction: false
 	},
-	speed: 700,
+	speed: 1000,
 	freeModeSticky: true,
 });
-
+const btnVideo = document.querySelector('.header_video')
 const navPanel = document.querySelector('.wrapp__navigation');
 let checked = document.querySelector('.checkbox');
 let cardBlock = document.querySelector('.chose_cardBlock');
 const header = document.querySelector('#header');
 const navigatorIcon = document.querySelector('.navigator__icon');
 
-checked.addEventListener('click', function () {
+btnVideo.addEventListener("click", () => {
+	const blockVideo = document.createElement("div")
+	const content = `
+		<video autoplay class = "video" poster ="images/header_iphone.png" controls="controls">
+			<source  src="2014-02-16%2015-21-22.webm"  type='video/webm'>
+		</video >
+	`
+	navPanel.style.display = "none"
+	blockVideo.classList.add('blockVideo')
+	document.body.classList.add('stop-scrolling')
+	document.body.prepend(blockVideo);
+	blockVideo.insertAdjacentHTML("afterbegin", content);
+	blockVideo.addEventListener('click', (e) => {
+		if (e.target === blockVideo) {
+			document.body.removeChild(blockVideo);
+			document.body.classList.remove('stop-scrolling');
+			navPanel.style.display = "flex"
+
+		}
+	});
+})
+
+checked.addEventListener('click', function (e) {
+	e.stopPropagation()
 	if (checked.checked) {
 		cardBlock.firstElementChild.style.display = "none";
 	} else {
@@ -36,7 +59,7 @@ checked.addEventListener('click', function () {
 })
 
 window.addEventListener('scroll', () => {
-	let sticky = navPanel.offsetTop;
+	// let sticky = navPanel.offsetTop;
 	if (window.pageYOffset > 0) {
 		navPanel.classList.add("nav__height");
 	} else {
@@ -69,7 +92,6 @@ if (menuLinks.length > 0) {
 					top: gotoValueBlock,
 					behavior: "smooth"
 				})
-				console.log(11);
 				document.querySelector('.navMobile').classList.toggle('activeNavMobile');
 				document.body.classList.toggle('togleBody');
 				navigatorIcon.classList.toggle('_active')
