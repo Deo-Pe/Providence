@@ -115,4 +115,3 @@ navigatorIcon.addEventListener('click', () => {
 	document.querySelector('.navMobile').classList.toggle('activeNavMobile');
 })
 
-console.log(navigator.userAgent);
