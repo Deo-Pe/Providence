@@ -31,7 +31,7 @@ btnVideo.addEventListener("click", () => {
 	const blockVideo = document.createElement("div");
 	const content = `
 		<video autoplay class = "video" poster ="images/header_iphone.png" controls="controls">
-			<source  src="2014-02-16%2015-21-22.webm"  type='video/webm'>
+			<source  src="#"  type='video/webm'>
 		</video >
 	`;
 	navPanel.style.display = "none";
