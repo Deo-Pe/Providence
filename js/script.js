@@ -131,5 +131,3 @@ navigatorIcon.addEventListener("click", () => {
 	document.body.classList.toggle("togleBody");
 	document.querySelector(".navMobile").classList.toggle("activeNavMobile");
 });
-
-// console.log(navigator.userAgent);
